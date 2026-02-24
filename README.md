@@ -52,3 +52,24 @@ Proyecto desarrollado por Juan, QA Manual con más de 8 años de experiencia, en
 
 
 
+## Día 2 - Pruebas de Login con POM
+
+En este día se implementaron flujos end-to-end de login en el sitio demo:
+
+- **Versión inicial:** test plano con credenciales demo.
+- **Versión mejorada:** implementación con Page Object Model (POM) para separar la lógica de UI y las pruebas.
+- **Escenarios cubiertos:**
+  - Login exitoso con credenciales válidas (`tomsmith / SuperSecretPassword!`).
+  - Login fallido con credenciales inválidas, validando mensaje de error.
+
+### Ejecución
+Para correr las pruebas:
+```bash
+npm test
+
+
+Esto ejecuta todos los casos definidos en la carpeta tests/.
+
+## Evidencia
+Los reportes de ejecución se generan automáticamente en playwright-report/ (ignorado en el repo).
+Se incluyen capturas y reportes seleccionados en la carpeta reports/ .(Si solo se ejecuta npm test, la copia del reporte a la carpeta reports se debe hacer manualmente, el package.json contiene la configuración necesaria, pero debe ejecutarse como npm run test:reports )

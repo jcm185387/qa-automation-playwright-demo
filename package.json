@@ -1,0 +1,31 @@
+{
+  "name": "qa-automation-playwright-demo",
+  "version": "1.0.0",
+  "description": "Demo para Automatización de pruebas con Playwright\r # qa-automation-playwright-demo\r Demo para Automatización de pruebas con Playwright",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2",
+    "playwright-core": "^1.58.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "del-cli": "^7.0.0"
+  },
+"scripts": { "test": "npx playwright test", 
+  "test:reports": "npx playwright test && del-cli reports && mkdir reports && xcopy /E /I playwright-report reports" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcm185387/qa-automation-playwright-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jcm185387/qa-automation-playwright-demo/issues"
+  },
+  "homepage": "https://github.com/jcm185387/qa-automation-playwright-demo#readme"
+}
