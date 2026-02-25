@@ -73,3 +73,29 @@ Esto ejecuta todos los casos definidos en la carpeta tests/.
 ## Evidencia
 Los reportes de ejecución se generan automáticamente en playwright-report/ (ignorado en el repo).
 Se incluyen capturas y reportes seleccionados en la carpeta reports/ .(Si solo se ejecuta npm test, la copia del reporte a la carpeta reports se debe hacer manualmente, el package.json contiene la configuración necesaria, pero debe ejecutarse como npm run test:reports )
+
+
+## Día 3 - Evidencia automática en carpeta `reports/`
+
+En este día se configuró Playwright para generar evidencia visual y reportes HTML de cada ejecución:
+
+- **Screenshots**: ahora se capturan en todos los tests (`screenshot: 'on'`).
+- **Videos**: se graban en todos los tests (`video: 'on'`).
+- **Reporte HTML**: se genera automáticamente en `playwright-report/`.
+
+Para facilitar la presentación a reclutadores, se creó un script que copia el reporte a la carpeta `reports/`, que sí se sube al repositorio.
+
+### Ejecución
+Para correr las pruebas y generar evidencia en `reports/`:
+
+```bash
+npm run test:reports
+
+
+## Evidencia
+Después de ejecutar el comando:
+La carpeta reports/ contendrá un archivo index.html con el reporte navegable.
+Cada test incluye:
+Steps: acciones ejecutadas (ej. goto(), fill(), click()).
+Screenshots: capturas del estado de la página.
+Videos: grabación completa del flujo.
