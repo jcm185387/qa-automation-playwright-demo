@@ -97,5 +97,45 @@ Después de ejecutar el comando:
 La carpeta reports/ contendrá un archivo index.html con el reporte navegable.
 Cada test incluye:
 Steps: acciones ejecutadas (ej. goto(), fill(), click()).
-Screenshots: capturas del estado de la página.
+Screenshots: capturas del estado de la página.  
 Videos: grabación completa del flujo.
+
+
+
+## Día 4 - Integración con CI/CD en GitHub Actions
+En este día se configuró un workflow de GitHub Actions para ejecutar las pruebas automáticamente en cada push o pull request a la rama main.
+
+.github/workflows/playwright.yml
+Funcionamiento
+    Cada push o PR a la rama main dispara el workflow.
+    El runner de GitHub instala Node.js y tus dependencias.
+    Se ejecutan automáticamente los tests con Playwright.
+    El reporte HTML se guarda como artefacto en la pestaña Actions de tu repo.
+Evidencia
+    En la pestaña Actions de GitHub, selecciona la ejecución más reciente.
+    En la sección Artifacts, descarga el archivo playwright-report.
+    Al abrir index.html, verás el reporte navegable con capturas y videos.
+## Flujo CI/CD Día 4
+[1] git push a la rama main
+        │
+        ▼
+[2] GitHub Actions detecta el push
+        │
+        ▼
+[3] Runner en la nube (ubuntu-latest)
+        │
+        ├─ Instala Node.js
+        ├─ Descarga dependencias (npm install)
+        ├─ Ejecuta pruebas (npx playwright test)
+        │
+        ▼
+[4] Genera reporte HTML en playwright-report/
+        │
+        ▼
+[5] Sube reporte como Artifact en GitHub Actions
+        │
+        ▼
+[6] Reclutador descarga Artifact desde pestaña Actions
+        │
+        ▼
+[7] Abre index.html → Navega evidencia (steps, screenshots, videos)
