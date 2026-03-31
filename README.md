@@ -12,7 +12,7 @@ Incluye ejemplos de pruebas end-to-end, integración con CI/CD y reportes de eje
 ## ⚙️ Instalación
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/<tu-usuario>/qa-automation-playwright-demo.git
+   git clone https://github.com/jcm185387/qa-automation-playwright-demo.git
    cd qa-automation-playwright-demo
 2. Instalar dependencias:
    ```bash
